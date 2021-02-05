@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ClickController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +16,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('view-click-area');
 });
+Route::get('/clickarea', function () {
+    return view('view-click-area');
+})->name('clickarea');
+
+
+Route::get('clicks/metrics', [ClickController::class, 'GetMetrics'])->name('clicks.metrics');
+
