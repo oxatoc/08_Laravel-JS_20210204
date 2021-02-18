@@ -22,7 +22,7 @@ function onAreaClick(event) {
     });
 
 
-    XHR.open('POST', 'http://127.0.0.1:8000/api/clicks');
+    XHR.open('POST', '/api/clicks');
     XHR.send(FD);
 }
 
